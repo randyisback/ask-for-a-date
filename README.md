@@ -45,10 +45,9 @@ document.addEventListener('keydown', function (event) {
     }
 });
 ```
+## 🤝 Katkıda Bulunma
 
- ## Katkıda Bulunma
-
-Katkıda bulunmak isterseniz, bir çekme isteği göndermek veya bir sorun bildirmek için GitHub sayfamızı ziyaret edebilirsiniz.
+Katkılarınız benim için önemli. Herhangi bir hata bulursanız veya önerileriniz varsa, lütfen bir [pull request](link) gönderin.
 
 ## Lisans
 

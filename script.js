@@ -44,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
 //  });
 
 //  function generateHearts() {
-//      const symbols = ['❤️', '💖', '💗', '💕', '💓']; // Kalp sembolleri
-//      const heartInterval = 50; // Kalplerin her 200ms'de bir oluşturulması
+//      const symbols = ['❤️', '💖', '💗', '💕', '💓']; // 
+//      const heartInterval = 50; //   200ms'de bir oluştur 
 
 //      setInterval(() => {
-//          const symbol = symbols[Math.floor(Math.random() * symbols.length)]; // Rastgele sembol seç
+//          const symbol = symbols[Math.floor(Math.random() * symbols.length)]; // Rastgele sembol 
 //          createHeart(symbol);
 //      }, heartInterval);
 //  }
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //      const heart = document.createElement('div');
 //      heart.classList.add('heart');
 //      heart.textContent = symbol; // Sembole göre içeriği ayarla
-//      heart.style.left = Math.random() * window.innerWidth + 'px'; // Rastgele yatay konum
-//      heart.style.top = Math.random() * window.innerHeight + 'px'; // Rastgele dikey konum
+//      heart.style.left = Math.random() * window.innerWidth + 'px'; //  yatay konum
+//      heart.style.top = Math.random() * window.innerHeight + 'px'; // dikey konum
 //      heart.style.animationName = 'heartAnimation';
 //      heart.style.animationDuration = '.4s'; // Animasyon süresi
 //      document.body.appendChild(heart);
@@ -86,7 +86,7 @@ function generateHearts() {
     const heartInterval = 100;
 
     setInterval(() => {
-        const symbol = symbols[Math.floor(Math.random() * symbols.length)]; // Rastgele sembol seç
+        const symbol = symbols[Math.floor(Math.random() * symbols.length)]; // Rastgele sembol  
         createHeart(symbol);
     }, heartInterval);
 }
@@ -95,8 +95,8 @@ function createHeart(symbol) {
     const heart = document.createElement('div');
     heart.classList.add('heart');
     heart.textContent = symbol;
-    heart.style.left = Math.random() * window.innerWidth + 'px';               // Rastgele yatay konum
-    heart.style.top = Math.random() * window.innerHeight + 'px';               // Rastgele dikey konum
+    heart.style.left = Math.random() * window.innerWidth + 'px';    
+    heart.style.top = Math.random() * window.innerHeight + 'px';             
     heart.style.animationName = 'heartAnimation';
     heart.style.animationDuration = '.9s';
     document.body.appendChild(heart);
@@ -108,10 +108,10 @@ let isMoved = false; // Butonun hareket edip etmediğini izlemek için bir bayra
 
 btn.addEventListener("mouseover", function() {
     if (!isMoved) {
-        btn.style.transform = `translate(-150px, 0px)`; // Butonu sola kaydır
+        btn.style.transform = `translate(-80px, 50px)`; // Butonu sola kaydır
         isMoved = true; // Bayrağı güncelle
     } else {
-        btn.style.transform = `translate(100px, 0px)`; // Butonu başlangıç pozisyonuna geri getir
+        btn.style.transform = `translate(80px, 50px)`; // Butonu başlangıç pozisyonuna geri getir
         isMoved = false; // Bayrağı güncelle
     }
     
@@ -122,17 +122,21 @@ btn.addEventListener("mouseover", function() {
 document.addEventListener('keydown', function (event) {
     if (event.key === 'Tab') {
         noButton.style.animation = 'explode 0.5s forwards'; // Patlama animasyonunu etkinleştir
+        if (!noButton.dataset.tabPressed) {
+            noButton.dataset.tabPressed = true; // tab basıldı olarak işaretle
         setTimeout(() => noButton.style.display = 'none', 500); // Butonu 0.5 saniye sonra gizle
         event.preventDefault(); // block tab
 
         // "title" change
         const title = document.querySelector('.title');
         title.textContent = 'Hile yapmak yok :)';
+        
 
         //  turn back
         setTimeout(() => {
             title.textContent = 'Çıkalım mı artık?';
         }, 2000);
     }
+}
 });
 // Coding By AzadCoder - ig: @azadcoderr

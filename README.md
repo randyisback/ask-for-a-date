@@ -47,7 +47,7 @@ document.addEventListener('keydown', function (event) {
 ```
 ## 🤝 Katkıda Bulunma
 
-Katkılarınız benim için önemli. Herhangi bir hata bulursanız veya önerileriniz varsa, lütfen bir [pull request](link) gönderin.
+Katkılarınız benim için önemli. Herhangi bir hata bulursanız veya önerileriniz varsa, lütfen benimle iletişime geçin.
 
 ## Lisans
 

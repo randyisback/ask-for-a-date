@@ -235,3 +235,9 @@ footer a:hover{
   transition: .3s ease;
   scale: 1.1;
 }
+
+
+::selection {
+    background-color: white;
+    color: black; /* Opsiyonel olarak metin rengini beyaz yapabilirsiniz */
+}

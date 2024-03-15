@@ -239,5 +239,6 @@ footer a:hover{
 
 ::selection {
     background-color: white;
-    color: black; /* Opsiyonel olarak metin rengini beyaz yapabilirsiniz */
+    color: black; 
+    
 }

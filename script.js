@@ -140,3 +140,64 @@ document.addEventListener('keydown', function (event) {
 }
 });
 // Coding By AzadCoder - ig: @azadcoderr
+
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+
+
+ 
+    document.onkeydown = function (e) {
+        if (e.ctrlKey && (e.keyCode === 85)) {
+            return false;
+        }
+    }; 
+ 
+    window.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey || e.metaKey) && e.keyCode == 85) {
+                disabledEvent(e);
+            }
+            if ((e.ctrlKey || e.metaKey) && e.keyCode == 76 && e.shiftKey) {
+                disabledEvent(e);
+            }
+        }, false);
+    function disabledEvent(e) {
+            if (e.stopPropagation) {
+        e.stopPropagation();
+            }
+    if (e.preventDefault) {
+        e.preventDefault();
+            }
+    e.cancelBubble = true;
+    e.returnValue = false;
+    return false;
+        }
+    }); 
+
+
+ 
+    window.addEventListener("beforeunload", function (e) {
+        var confirmationMessage = "Sayfayı kapatmak istediğinizden emin misiniz?";
+    e.returnValue = confirmationMessage;
+    return confirmationMessage;
+    });
+    document.addEventListener('keydown', function (e) {
+        if ((e.ctrlKey || e.metaKey) && e.keyCode == 87) {
+        disabledEvent(e);
+        }
+    if (e.altKey && e.keyCode == 115) {
+        disabledEvent(e);
+        }
+    }, false);
+    function disabledEvent(e) {
+        if (e.stopPropagation) {
+        e.stopPropagation();
+        }
+    if (e.preventDefault) {
+        e.preventDefault();
+        }
+    e.cancelBubble = true;
+    e.returnValue = false;
+    return false;
+    } 
